@@ -15,6 +15,12 @@ libgen=   "https://libgen.is/search.php?req={}&lg_topic=libgen&open=0&view=simpl
 jiumo =  None 
 zlibrary = "https://sg1lib.org/s/{}?"
 
+alias_to_browser = {
+    'safa' : 'safari',
+    'chro' : 'Google Chrome',
+    'edge' : 'microsoft-edge',
+}
+
 
 URLS = dict(
 video = [

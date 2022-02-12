@@ -1,14 +1,8 @@
 #!/usr/bin/env python
 from get_platform import get_platform
-from config import make_urls
+from config import make_urls, alias_to_browser
 import os
 import argparse
-
-alias_to_browser = {
-    'safa' : 'safari',
-    'chro' : 'Google Chrome',
-    'edge' : 'microsoft-edge',
-}
 
 def augment_url(url):
     res = url.strip().replace(' ', '%20')
@@ -41,24 +35,13 @@ def main():
     parser.add_argument("--debug", "-d", action="store_true")
     args = parser.parse_args()
 
-    browser = alias_to_browser.get(args.browser, 'safa')
+    browser = alias_to_browser.get(args.browser, default_browser)
     keyword = input(
         f"Mode: {args.search_type}\n\
 Browser: {browser}\n\
 Please input keyword to search:\n")
     urls = make_urls(keyword, args.search_type, platform)
     search(urls, browser, platform, args.debug)
-
-    # if args.search_type == 'video':
-        # search(video_search_urls)
-    # elif args.search_type == 'general':
-        # search(general_search_urls)
-    # elif args.search_type == 'ebook':
-        # search(ebook_search_urls)
-    # elif args.search_type == 'zh':
-        # search(zh_search_urls)
-    # else:
-        # raise NotImplementedError
 
 if __name__ == '__main__':
     main()
