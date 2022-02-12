@@ -1,6 +1,9 @@
 # videos
 youtube=  "https://www.youtube.com/results?search_query={}"
-bilibili= "https://search.bilibili.com/all?={}&from_source=webtop_search&spm_id_from=333.1007"
+bilibili= {
+    'Darwin' : "https://search.bilibili.com/all?={}&from_source=webtop_search&spm_id_from=333.1007",
+    'Windows' : "https://search.bilibili.com/all?keyword={}",
+}
 # general
 google=   "https://www.google.com.hk/search?q={}"
 bing=     "https://www.bing.com/search?q={}"
@@ -12,10 +15,6 @@ libgen=   "https://libgen.is/search.php?req={}&lg_topic=libgen&open=0&view=simpl
 jiumo =  None 
 zlibrary = "https://sg1lib.org/s/{}?"
 
-alias_to_name = {
-    'safa' : 'safari',
-    'chro' : 'Google Chrome'
-}
 
 URLS = dict(
 video = [
@@ -32,12 +31,20 @@ zh = [
 ],
 )
 
-def make_urls(kw, tp):
+def make_urls(kw, tp, plat):
+    """
+    Inputs:
+    - kw : keyword
+    - tp: type
+    - plat: platform
+    """
     tplts = URLS.get(tp)
     res = []
     for tplt in tplts:
         if tplt is None:
             continue
+        if type(tplt) is dict:
+            tplt = tplt.get(plat)
         res.append(
             tplt.format(kw)
         )
