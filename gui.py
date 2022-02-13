@@ -58,7 +58,7 @@ ttk.Label(frm, text="Search Type").grid(column=1, row=1, sticky='ew', **grid_kwa
 search_type = StringVar()
 com = ttk.Combobox(frm, textvariable=search_type)
 com.grid(column=10, row=1, sticky='w', **grid_kwargs)  
-com['value'] = ("general", "video", "ebook", "zh")
+com['value'] = ("general", "video", "ebook", "zh", "enw")
 com.current(0)
 
 ttk.Button(frm, text="Search", command=auto_search).grid(column=10, row=2, sticky='w', **grid_kwargs)

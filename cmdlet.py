@@ -29,7 +29,7 @@ def main():
 
     parser = argparse.ArgumentParser()
     parser.add_argument("search_type", type=str, 
-        help="Search Type: video, general, ebook, zh")
+        help="Search Type: video, general, ebook, zh, enw")
     parser.add_argument("--browser", '-B', type=str, 
         help="Browser Type: safa, chro", default=default_browser)
     parser.add_argument("--debug", "-d", action="store_true")

@@ -14,6 +14,9 @@ zhihu = None
 libgen=   "https://libgen.is/search.php?req={}&lg_topic=libgen&open=0&view=simple&res=25&phrase=1&column=def"
 jiumo =  None 
 zlibrary = "https://sg1lib.org/s/{}?"
+# english word
+webster = "https://www.merriam-webster.com/dictionary/{}"
+youdao = "https://youdao.com/result?word={}&lang=en"
 
 alias_to_browser = {
     'safa' : 'safari',
@@ -34,6 +37,9 @@ ebook = [
 ],
 zh = [
     baidu, zhihu, 
+],
+enw = [
+    webster, youdao,
 ],
 )
 
