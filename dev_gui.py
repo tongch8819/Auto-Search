@@ -68,9 +68,6 @@ ttk.Button(frm, text="Search", command=auto_search).grid(column=10, row=2, stick
 
 ttk.Button(frm, text="Quit", command=root.destroy ).grid(column=10, row=2, sticky='e', **grid_kwargs)
 
-def quit_app(event):
-    root.destroy()
 
-root.bind("<Return>", lambda x: auto_search())
-root.bind('<Control-x>', quit_app)
+
 root.mainloop()
