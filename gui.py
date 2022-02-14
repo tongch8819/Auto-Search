@@ -17,14 +17,15 @@ def center_window(width=300, height=200):
 
 def auto_search():
     keyword = keyword_obj.get()
-    browser = alias_to_browser['edge']
-    # cmd = f'start {browser}:https://www.baidu.com'
-    # print(cmd)
-    # os.system(cmd)
-    default_browser = browser
 
     search_type = com.get()
     platform = get_platform()
+    if platform == 'Windows':
+        browser = alias_to_browser['edge']
+    else:
+        browser = alias_to_browser['safa']
+    default_browser = browser
+        
     debug = False
 
     browser = alias_to_browser.get(browser, default_browser)
@@ -37,8 +38,7 @@ def auto_search():
 root = Tk()
 root.title('Auto Search Wizard')
 root.iconbitmap('Martz90-Circle-Plex.ico')
-center_window(400, 300)
-# root.geometry('400x400')
+center_window(500, 300)
 
 grid_kwargs = {
     'padx' : 5,

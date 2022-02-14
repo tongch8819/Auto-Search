@@ -17,7 +17,7 @@ def search(urls, browser, platform, debug=False):
             cmd = (f"start {browser}:{url}")
         else:
             # macos dependent
-            cmd = (f"start {browser}:{url}")
+            cmd = (f"open -a {browser} {url}")
         if debug:
             print(cmd)
         else:
