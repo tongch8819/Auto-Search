@@ -1,56 +1,57 @@
 <!DOCTYPE html>
 <head>
-    <title>Auto Search</title>
-    <link rel="icon" type="image/x-icon" href="Martz90-Circle-Plex.ico">
-    <link rel="stylesheet" href="search.css">
-    <script src="search.js"></script>
+  <title>Auto Search</title>
+  <link rel="icon" type="image/x-icon" href="img/Martz90-Circle-Plex.ico">
+  <link rel="stylesheet" href="css/search.css">
+  <script src="js/search.js"></script>
 </head>
 <body>
-    <div class="header">
-        <h1>Header</h1>
-    </div>
 
-    <div class="topnav">
-        <a class="active" href="home.html">Home</a>
-        <a href="news.html">News</a>   
-        <a href="contact.html">Contact</a>
-        <a href="about.html">About</a> 
-    </div>
-
-<div class="row">
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+  <div class="topnav">
+    <a class="active" href="home.html">Home</a>
+    <a href="news.html">News</a>
+    <a href="contact.html">Contact</a>
+    <a href="about.html">About</a>
+    <a href="cv.html">CV</a>
   </div>
-  
-  <div class="column middle">
-    <h2>Main Content</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
-    <form>
+
+  <div class="row">
+    <div class="column side">
+      <h2>Useful Links</h2>
+      <ul>
+        <li><a href="https://matlab.mathworks.com/">Matlab</a></li>
+        <li><a href="https://www.mathworks.com/help/matlab/">Matlab Documentation</a></li>
+        <li><a href="https://collegecompendium.org/search?q=compilers">College Compendium</a></li>
+      </ul>
+    </div>
+
+    <div class="column middle">
+      <h2>Main Content</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet pretium urna. Vivamus venenatis velit nec neque ultricies, eget elementum magna tristique. Quisque vehicula, risus eget aliquam placerat, purus leo tincidunt eros, eget luctus quam orci in velit. Praesent scelerisque tortor sed accumsan convallis.</p>
+      <form>
         <label for="kw">Search Keyword</label>
         <input type="text" id="kw" placeholder="Search...">
         <label for="st">Search Type</label>
         <select id="st">
-            <option value="general" selected>General</option>
-            <option value="video">Video</option>
-            <option value="ebook">Ebook</option>
-            <option value="zh">Chinese</option>
-            <option value="enw">English Word</option>
-            </select>
+          <option value="general" selected>General</option>
+          <option value="video">Video</option>
+          <option value="ebook">Ebook</option>
+          <option value="zh">Chinese</option>
+          <option value="enw">English Word</option>
+        </select>
         <input type="button" id="se" onclick="search()" value="Search">
-    </form>
-  </div>
-  
-  <div class="column side">
-    <h2>Side</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
-  </div>
-</div>
-
-
-
-    <div class="footer">
-        Footer
+      </form>
     </div>
+
+    <div class="column side">
+      <h2>Side</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit..</p>
+    </div>
+  </div>
+
+
+  <div class="footer">
+    Footer
+  </div>
 </body>
